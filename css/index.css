@@ -1,0 +1,25 @@
+body
+{
+	margin:0;
+	padding:0;
+}
+
+#title{
+	margin: 0 auto;
+	width: 480px;
+	height:100px;
+	background-color: black;
+	text-align: center;
+}
+
+#title p{
+	font-size: 30px;
+	color: white;
+	line-height: 100px;
+	margin: 0 auto;
+}
+
+#GameWindow{
+	display:block;
+	margin: 0 auto;
+}
