@@ -17,12 +17,11 @@ function init() {
 	//var field = new Array((GAME_WINDOW/GRID_SIZE)*(GAME_WINDOW/GRID_SIZE));
 
     canvas = document.getElementById('GameWindow'); // index.htmlからcanvas要素を取得
+    if(!canvas || !canvas.getContext) return false;
     context = canvas.getContext('2d');                // コンテキスト
 
  	canvas.width = SCREEN_WIDTH;
  	canvas.height = SCREEN_HEIGHT;
-
-
 
 	requestAnimationFrame(update);
 }
@@ -36,8 +35,15 @@ function update() {
 //更新したゲーム画面の再描写
 function render() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
-	context.fillRect(0, 0, 800, 1);
-	context.fillRect(0, 599, 800, 1);
-	context.fillRect(0, 0, 1, 600);
-	context.fillRect(799, 0, 1, 600);
+	//context.fillRect(0, 599, 800, 1);
+	//context.fillRect(0, 0, 1, 600);
+	//context.fillRect(799, 0, 1, 600);
+}
+
+var Virus = function(){
+	this.x;
+	this.y;
+	this.speed;
+	this.power;
+	this.color;
 }
